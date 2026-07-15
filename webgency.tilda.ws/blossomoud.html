@@ -804,38 +804,20 @@ alt='' imgfield='tn_img_1780772300356'
   filter: brightness(1.05) !important;
 }
 
-/* Flexbox responsive container configuration */
+/* Absolute Centering Layout Override for RSVP block */
 #rec2339662123 .t396__artboard {
-  height: auto !important;
-  min-height: 280px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-sizing: border-box !important;
-  padding: 40px 20px !important;
-}
-
-#rec2339662123 .t396__carrier, #rec2339662123 .t396__filter {
-  height: 100% !important;
-  width: 100% !important;
-  position: absolute !important;
-}
-
-#rec2339662123 .tn-elem {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  margin: 12px 0 !important;
-  display: block !important;
-  text-align: center !important;
+  height: 250px !important;
 }
 
 #rec2339662123 .tn-elem[data-elem-id="1771277026942000001"] {
-  width: 100% !important;
+  position: absolute !important;
+  top: 50px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 90% !important;
   max-width: 600px !important;
-  margin-bottom: 6px !important;
+  display: block !important;
+  text-align: center !important;
 }
 
 #rec2339662123 .tn-elem[data-elem-id="1771277026942000001"] .tn-atom {
@@ -851,9 +833,13 @@ alt='' imgfield='tn_img_1780772300356'
 }
 
 #rec2339662123 .tn-elem[data-elem-id="1779545532876"] {
-  width: 100% !important;
+  position: absolute !important;
+  top: 130px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 90% !important;
   max-width: 420px !important;
-  margin-top: 6px !important;
+  display: block !important;
 }
 
 #rec2339662123 .tn-elem[data-elem-id="1779545532876"] .tn-atom {
@@ -865,8 +851,17 @@ alt='' imgfield='tn_img_1780772300356'
 }
 
 @media screen and (max-width: 560px) {
+  #rec2339662123 .t396__artboard {
+    height: 210px !important;
+  }
+  #rec2339662123 .tn-elem[data-elem-id="1771277026942000001"] {
+    top: 40px !important;
+  }
   #rec2339662123 .tn-elem[data-elem-id="1771277026942000001"] .tn-atom {
     font-size: 26px !important;
+  }
+  #rec2339662123 .tn-elem[data-elem-id="1779545532876"] {
+    top: 105px !important;
   }
   #rec2339662123 .tn-elem[data-elem-id="1779545532876"] .tn-atom {
     gap: 15px !important;

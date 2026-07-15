@@ -9,57 +9,19 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script>
 <!-- Antigravity Scroll Lock + Animations -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-
-/* ===================================================
-   MOBILE GLOBAL FIX — prevents Android zoom-out look
-   =================================================== */
+/* === GLOBAL RESPONSIVE FIXES === */
 html, body {
   overflow-x: hidden !important;
   max-width: 100% !important;
   width: 100% !important;
-  /* CRITICAL: do NOT set min-width, let content scale */
 }
-
-/* Make sure all top-level Tilda wrappers never overflow */
 .t-records, .t-record, .r, .t-container {
   max-width: 100% !important;
   overflow-x: hidden !important;
   box-sizing: border-box !important;
 }
 
-/* Force every t396 artboard to stay within screen width */
-.t396__artboard,
-.t396__filter,
-.t396__carrier {
-  max-width: 100vw !important;
-  overflow: hidden !important;
-}
-
-/* All absolute-positioned Tilda elements — clip to viewport */
-.t396__elem {
-  box-sizing: border-box !important;
-}
-
-/* ===================================================
-   MOBILE ONLY — Scale down oversized Tilda blocks so
-   they don't cause a zoomed-out/tiny appearance
-   =================================================== */
-@media screen and (max-width: 479px) {
-  /* Prevent any element from spilling outside screen */
-  .t396__artboard {
-    overflow: hidden !important;
-  }
-
-  /* Images inside blocks shouldn't exceed screen */
-  .tn-atom__img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
-
-/* ===================================================
-   CONFIRM PRESENCE SECTION — center on mobile
-   =================================================== */
+/* Confirm Presence section - center all elements on mobile */
 @media screen and (max-width: 960px) {
   #rec2339662123 .t396__artboard {
     height: auto !important;
@@ -104,9 +66,7 @@ html, body {
   }
 }
 
-/* ===================================================
-   DRESS CODE SECTION — center on mobile
-   =================================================== */
+/* Dress Code section - center image and text on mobile */
 @media screen and (max-width: 960px) {
   #rec2355542373 .t396__artboard {
     height: auto !important;
@@ -129,7 +89,7 @@ html, body {
   }
 }
 
-/* === ALL Tilda blocks — prevent side overflow on small screens === */
+/* All Tilda blocks - prevent side overflow */
 @media screen and (max-width: 640px) {
   .t396__artboard {
     overflow: hidden !important;
@@ -143,8 +103,7 @@ html, body {
 
 
 
-
-/* === Dress Code heading — true centering at ALL breakpoints === */
+/* === Dress Code heading - true centering at ALL breakpoints === */
 #rec2355542373 .tn-elem[data-elem-id="1771277026942000001"] {
   left: 0 !important;
   width: 100% !important;
@@ -162,6 +121,7 @@ html, body {
   transform: translateX(-50%) !important;
 }
 /* === END heading centering === */
+
 
 
 
@@ -348,6 +308,7 @@ html.no-scroll, body.no-scroll {
 
 
 
+
 /* Custom logo styling and premium entry animation */
 .tn-elem__2339662063_custom_logo {
   position: absolute !important;
@@ -380,7 +341,6 @@ html.no-scroll, body.no-scroll {
     filter: blur(0);
     transform: translateX(-50%) translateY(0);
   }
-
 }
 </style>
 

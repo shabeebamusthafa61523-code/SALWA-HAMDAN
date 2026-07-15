@@ -7,6 +7,104 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script>
 <!-- Antigravity Scroll Lock + Animations -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+/* === GLOBAL RESPONSIVE FIXES === */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+.t-records, .t-record, .r, .t-container {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Confirm Presence section - center all elements on mobile */
+@media screen and (max-width: 960px) {
+  #rec2339662123 .t396__artboard {
+    height: auto !important;
+    min-height: 280px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 30px 20px !important;
+    box-sizing: border-box !important;
+  }
+  #rec2339662123 .t396__carrier,
+  #rec2339662123 .t396__filter {
+    height: 100% !important;
+  }
+  #rec2339662123 .tn-elem[data-elem-id="1771277026942000001"],
+  #rec2339662123 .tn-elem[data-elem-id="1779543504626"],
+  #rec2339662123 .tn-elem[data-elem-id="1779545532876"] {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  #rec2339662123 .tn-elem[data-elem-id="1771277026942000001"] .tn-atom {
+    font-size: 30px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+  #rec2339662123 .tn-elem[data-elem-id="1779543504626"] {
+    max-width: 140px !important;
+    margin: 10px auto !important;
+  }
+  #rec2339662123 .tn-elem[data-elem-id="1779545532876"] .tn-atom {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 60px !important;
+  }
+}
+
+/* Dress Code section - center image and text on mobile */
+@media screen and (max-width: 960px) {
+  #rec2355542373 .t396__artboard {
+    height: auto !important;
+    min-height: 580px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 20px 10px !important;
+    box-sizing: border-box !important;
+  }
+  #rec2355542373 .tn-elem[data-elem-id="1780772300356"] {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 10px auto !important;
+    display: block !important;
+    width: 220px !important;
+    max-width: 90% !important;
+  }
+}
+
+/* All Tilda blocks - prevent side overflow */
+@media screen and (max-width: 640px) {
+  .t396__artboard {
+    overflow: hidden !important;
+  }
+  .t396__elem {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+}
+/* === END GLOBAL RESPONSIVE FIXES === */
+
+
 
 /* Disable scroll style on HTML and Body */
 html.no-scroll, body.no-scroll {
@@ -42,10 +140,10 @@ html.no-scroll, body.no-scroll {
   }
 }
 
-/* Move dress code image up and increase size */
+/* Move dress code image - centered */
 #rec2355542373 .tn-elem[data-elem-id="1780772300356"] {
   top: 110px !important;
-  width: 300px !important;
+  width: 236px !important;
 }
 
 /* Button hover animations */

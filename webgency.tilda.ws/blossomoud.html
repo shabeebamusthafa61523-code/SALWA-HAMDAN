@@ -16,6 +16,17 @@ html.no-scroll, body.no-scroll {
   width: 100% !important;
 }
 
+/* Prevent horizontal overflow globally for a fully responsive mobile experience */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Hide line-divider2.png globally as requested */
+.tn-elem[data-elem-id="1779543504626"] {
+  display: none !important;
+}
 
 /* Apply Montserrat block-like font to ONLY the main details text block */
 #rec2339662083 .tn-elem[data-elem-id="1779624381838000001"] {
@@ -117,6 +128,26 @@ html.no-scroll, body.no-scroll {
   text-shadow: 0.5px 0 0 #191970, -0.5px 0 0 #191970 !important;
 }
 
+/* Responsive scaling for names on mobile so they fit Android/iOS screens */
+@media screen and (max-width: 959px) {
+  .tn-elem__23396620631779566247730000001 .tn-atom,
+  .tn-elem__23396620631779566247730000001 .tn-atom span {
+    font-size: 46px !important;
+  }
+  .tn-elem__23396620631779566247730000004 .tn-atom {
+    font-size: 24px !important;
+  }
+}
+@media screen and (max-width: 479px) {
+  .tn-elem__23396620631779566247730000001 .tn-atom,
+  .tn-elem__23396620631779566247730000001 .tn-atom span {
+    font-size: 36px !important;
+  }
+  .tn-elem__23396620631779566247730000004 .tn-atom {
+    font-size: 20px !important;
+  }
+}
+
 /* Reset initial state for rich sliding/fade transitions */
 .tn-elem__23396620631779566247730000001 .tn-atom .slide-left-name {
   display: block;
@@ -140,7 +171,6 @@ html.no-scroll, body.no-scroll {
 }
 
 /* Trigger custom rich animations when start-names-slide class is active */
-/* Trigger custom rich sliding and erasing loop animations when start-names-slide class is active */
 .tn-elem__23396620631779566247730000001.start-names-slide .tn-atom .slide-left-name {
   animation: name-left-loop 12s ease-in-out infinite !important;
 }
@@ -212,15 +242,11 @@ html.no-scroll, body.no-scroll {
   }
 }
 
-
-
-
-
 /* Custom logo styling and premium entry animation */
 .tn-elem__2339662063_custom_logo {
   position: absolute !important;
   left: 50% !important;
-  transform: translateX(-50%) translateY(-20px) !important;
+  transform: translateX(-50%) translateY(-20px);
   top: 10px !important;
   width: 60px !important;
   z-index: 10 !important;
@@ -402,7 +428,7 @@ waitForButton('.popup-enter', function(enterButton) {
 style="width:100%;height:auto;object-fit:cover;display:block;visibility:hidden;position:absolute;top:0;left:0;"> <source src="bridegroom.mp4" type="video/mp4"> </video> <canvas id="fadeCanvas" style="width:100%;display:block;"></canvas> </div> <script>(function(){var video=document.getElementById('fadeVideo');var canvas=document.getElementById('fadeCanvas');var ctx=canvas.getContext('2d');var drawing=false;
 video.addEventListener('loadedmetadata',function() {canvas.width=video.videoWidth;canvas.height=video.videoHeight;});function drawFrame() {if(!video.paused&&!video.ended) {ctx.drawImage(video,0,0,canvas.width,canvas.height);var gradient=ctx.createLinearGradient(0,canvas.height*0.8,0,canvas.height);gradient.addColorStop(0,'rgba(0,0,0,0)');gradient.addColorStop(1,'rgba(0,0,0,1)');ctx.globalCompositeOperation='destination-out';ctx.fillStyle=gradient;ctx.fillRect(0,canvas.height*0.8,canvas.width,canvas.height);ctx.globalCompositeOperation='source-over';}
 requestAnimationFrame(drawFrame);}
-video.addEventListener('canplay',function() {if(!drawing) {drawing=true;drawFrame();}});})();</script> </div> </div>  </div> <div class='t396__elem tn-elem tn-elem__23396620631779566247730000001 t-animate' data-elem-id='1779566247730000001' data-elem-type='text' data-field-top-value="110" data-field-left-value="320" data-field-height-value="100" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="59" data-field-top-res-320-value="100" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-fontsize-res-320-value="59" data-field-left-res-480-value="-38" data-field-left-res-640-value="42" data-field-left-res-960-value="202"> <div class='tn-atom'field='tn_text_1779566247730000001'><span class="slide-left-name">Fathima Salwa</span><br /><br /><br /><span class="slide-right-name">Hamdan</span></div> </div>   <div class='t396__elem tn-elem tn-elem__23396620631779566247730000004 t-animate' data-elem-id='1779566247730000004' data-elem-type='text' data-field-top-value="144" data-field-left-value="573" data-field-height-value="31" data-field-width-value="55" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="28" data-field-top-res-320-value="132" data-field-left-res-320-value="134" data-animate-delay-res-320="3" data-field-left-res-480-value="214" data-field-left-res-640-value="294" data-field-left-res-960-value="454"> <div class='tn-atom'field='tn_text_1779566247730000004'>&amp;</div> </div>  </div> </div> 
+video.addEventListener('canplay',function() {if(!drawing) {drawing=true;drawFrame();}});})();</script> </div> </div>  </div> <div class='t396__elem tn-elem tn-elem__23396620631779566247730000001 t-animate' data-elem-id='1779566247730000001' data-elem-type='text' data-field-top-value="110" data-field-left-value="320" data-field-height-value="100" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="59" data-field-top-res-320-value="100" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-fontsize-res-320-value="59" data-field-left-res-480-value="-38" data-field-left-res-640-value="42" data-field-left-res-960-value="202"> <div class='tn-atom'field='tn_text_1779566247730000001'><div><br/><span class="slide-left-name">Fathima Salwa</span></div><br /><br /><span class="slide-right-name">Hamdan</span></div></div> </div>   <div class='t396__elem tn-elem tn-elem__23396620631779566247730000004 t-animate' data-elem-id='1779566247730000004' data-elem-type='text' data-field-top-value="144" data-field-left-value="573" data-field-height-value="31" data-field-width-value="55" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="28" data-field-top-res-320-value="132" data-field-left-res-320-value="134" data-animate-delay-res-320="3" data-field-left-res-480-value="214" data-field-left-res-640-value="294" data-field-left-res-960-value="454"> <div class='tn-atom'field='tn_text_1779566247730000004'>&amp;</div> </div>  </div> </div> 
 <div class="t396__elem tn-elem tn-elem__2339662063_custom_logo" data-elem-id="custom_logo" data-elem-type="image">
  <div class="tn-atom">
    <img src="logo_transparent.png" alt="Wedding Logo" style="width:100%; height:auto; display:block;" />

@@ -3,7 +3,7 @@
     {
       "source": "/",
       "destination": "/webgency.tilda.ws/blossomoud.html",
-      "permanent": true
+      "permanent": false
     }
   ]
 }

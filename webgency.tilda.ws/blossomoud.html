@@ -16,13 +16,6 @@ html.no-scroll, body.no-scroll {
   width: 100% !important;
 }
 
-/* Prevent horizontal overflow globally for a fully responsive mobile experience */
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden !important;
-}
-
 /* Hide line-divider2.png globally as requested */
 .tn-elem[data-elem-id="1779543504626"] {
   display: none !important;
@@ -172,73 +165,52 @@ html, body {
 
 /* Trigger custom rich animations when start-names-slide class is active */
 .tn-elem__23396620631779566247730000001.start-names-slide .tn-atom .slide-left-name {
-  animation: name-left-loop 12s ease-in-out infinite !important;
+  animation: name-left-fade-in 2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards !important;
 }
 .tn-elem__23396620631779566247730000001.start-names-slide .tn-atom .slide-right-name {
-  animation: name-right-loop 12s ease-in-out 0.8s infinite !important;
+  animation: name-right-fade-in 2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
 }
 .tn-elem__23396620631779566247730000004.start-names-slide .tn-atom {
-  animation: amp-loop 12s ease-in-out 1.6s infinite !important;
+  animation: amp-fade-in 2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards !important;
 }
 
-/* Keyframes for rich entry sliding, 6-second stay, and left-to-right erase wipe */
-@keyframes name-left-loop {
-  0%, 5% {
+/* Keyframes for stable entry sliding that hold position permanently */
+@keyframes name-left-fade-in {
+  0% {
     opacity: 0;
-    transform: translateX(-100px) scale(0.9) rotate(-1deg);
-    filter: blur(10px);
-    clip-path: inset(0 0 0 0);
+    transform: translateX(-60px) scale(0.9);
+    filter: blur(8px);
   }
-  25%, 75% {
+  100% {
     opacity: 1;
-    transform: translateX(0) scale(1) rotate(0deg);
+    transform: translateX(0) scale(1);
     filter: blur(0);
-    clip-path: inset(0 0 0 0);
-  }
-  90%, 100% {
-    opacity: 0;
-    transform: translateX(20px) scale(0.95);
-    filter: blur(6px);
-    clip-path: inset(0 0 0 100%);
   }
 }
 
-@keyframes name-right-loop {
-  0%, 5% {
+@keyframes name-right-fade-in {
+  0% {
     opacity: 0;
-    transform: translateX(100px) scale(0.9) rotate(1deg);
-    filter: blur(10px);
-    clip-path: inset(0 0 0 0);
+    transform: translateX(60px) scale(0.9);
+    filter: blur(8px);
   }
-  25%, 75% {
+  100% {
     opacity: 1;
-    transform: translateX(0) scale(1) rotate(0deg);
+    transform: translateX(0) scale(1);
     filter: blur(0);
-    clip-path: inset(0 0 0 0);
-  }
-  90%, 100% {
-    opacity: 0;
-    transform: translateX(-20px) scale(0.95);
-    filter: blur(6px);
-    clip-path: inset(0 100% 0 0);
   }
 }
 
-@keyframes amp-loop {
-  0%, 5% {
+@keyframes amp-fade-in {
+  0% {
     opacity: 0;
-    transform: translateY(-30px) scale(0.5);
+    transform: translateY(-20px) scale(0.6);
     filter: blur(5px);
   }
-  25%, 75% {
+  100% {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
-  }
-  90%, 100% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.5);
-    filter: blur(5px);
   }
 }
 
@@ -276,32 +248,63 @@ html, body {
   }
 }
 
-/* Responsive centering and spacing for the ampersand element */
+/* Responsive centering and spacing for the heart element */
 .tn-elem__23396620631779566247730000004 {
   left: 50% !important;
   width: 60px !important;
   margin-left: -30px !important;
   text-align: center !important;
-  top: 156px !important; /* Move 5px down from 151px */
+  top: 175px !important;
+  transform: none !important;
+}
+.hero-heart-icon {
+  width: 26px !important;
+  height: 26px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  filter: drop-shadow(0 2px 6px rgba(25, 25, 112, 0.5)) drop-shadow(0 0 10px rgba(25, 25, 112, 0.3)) !important;
+  animation: heartPulse 2s ease-in-out infinite !important;
+}
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 2px 6px rgba(25, 25, 112, 0.5)) drop-shadow(0 0 10px rgba(25, 25, 112, 0.3)) !important;
+  }
+  50% {
+    transform: scale(1.22);
+    filter: drop-shadow(0 4px 12px rgba(25, 25, 112, 0.8)) drop-shadow(0 0 16px rgba(25, 25, 112, 0.5)) !important;
+  }
 }
 @media screen and (max-width: 1199px) {
   .tn-elem__23396620631779566247730000004 {
-    top: 152px !important; /* Move 5px down from 147px */
+    top: 170px !important;
+    transform: none !important;
   }
 }
 @media screen and (max-width: 959px) {
   .tn-elem__23396620631779566247730000004 {
-    top: 148px !important; /* Move 5px down from 143px */
+    top: 165px !important;
+    transform: none !important;
+  }
+  .hero-heart-icon {
+    width: 24px !important;
+    height: 24px !important;
   }
 }
 @media screen and (max-width: 639px) {
   .tn-elem__23396620631779566247730000004 {
-    top: 142px !important; /* Move 5px down from 137px */
+    top: 158px !important;
+    transform: none !important;
   }
 }
 @media screen and (max-width: 479px) {
   .tn-elem__23396620631779566247730000004 {
-    top: 134px !important; /* Move 5px down from 129px */
+    top: 152px !important;
+    transform: none !important;
+  }
+  .hero-heart-icon {
+    width: 22px !important;
+    height: 22px !important;
   }
 }
 
@@ -502,7 +505,7 @@ waitForButton('.popup-enter', function(enterButton) {
 style="width:100%;height:auto;object-fit:cover;display:block;visibility:hidden;position:absolute;top:0;left:0;"> <source src="bridegroom.mp4" type="video/mp4"> </video> <canvas id="fadeCanvas" style="width:100%;display:block;"></canvas> </div> <script>(function(){var video=document.getElementById('fadeVideo');var canvas=document.getElementById('fadeCanvas');var ctx=canvas.getContext('2d');var drawing=false;
 video.addEventListener('loadedmetadata',function() {canvas.width=video.videoWidth;canvas.height=video.videoHeight;});function drawFrame() {if(!video.paused&&!video.ended) {ctx.drawImage(video,0,0,canvas.width,canvas.height);var gradient=ctx.createLinearGradient(0,canvas.height*0.8,0,canvas.height);gradient.addColorStop(0,'rgba(0,0,0,0)');gradient.addColorStop(1,'rgba(0,0,0,1)');ctx.globalCompositeOperation='destination-out';ctx.fillStyle=gradient;ctx.fillRect(0,canvas.height*0.8,canvas.width,canvas.height);ctx.globalCompositeOperation='source-over';}
 requestAnimationFrame(drawFrame);}
-video.addEventListener('canplay',function() {if(!drawing) {drawing=true;drawFrame();}});})();</script> </div> </div>  </div> <div class='t396__elem tn-elem tn-elem__23396620631779566247730000001 t-animate' data-elem-id='1779566247730000001' data-elem-type='text' data-field-top-value="110" data-field-left-value="320" data-field-height-value="100" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="59" data-field-top-res-320-value="100" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-fontsize-res-320-value="59" data-field-left-res-480-value="-38" data-field-left-res-640-value="42" data-field-left-res-960-value="202"> <div class='tn-atom'field='tn_text_1779566247730000001'><div><br/><span class="slide-left-name">Fathima Salwa</span></div><br /><br /><span class="slide-right-name">Hamdan</span></div></div> </div>   <div class='t396__elem tn-elem tn-elem__23396620631779566247730000004 t-animate' data-elem-id='1779566247730000004' data-elem-type='text' data-field-top-value="144" data-field-left-value="573" data-field-height-value="31" data-field-width-value="55" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="28" data-field-top-res-320-value="132" data-field-left-res-320-value="134" data-animate-delay-res-320="3" data-field-left-res-480-value="214" data-field-left-res-640-value="294" data-field-left-res-960-value="454"> <div class='tn-atom'field='tn_text_1779566247730000004'>&amp;</div> </div>  </div> </div> 
+video.addEventListener('canplay',function() {if(!drawing) {drawing=true;drawFrame();}});})();</script> </div> </div>  </div> <div class='t396__elem tn-elem tn-elem__23396620631779566247730000001' data-elem-id='1779566247730000001' data-elem-type='text' data-field-top-value="110" data-field-left-value="320" data-field-height-value="100" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="59" data-field-top-res-320-value="100" data-field-left-res-320-value="-118" data-field-fontsize-res-320-value="59" data-field-left-res-480-value="-38" data-field-left-res-640-value="42" data-field-left-res-960-value="202"> <div class='tn-atom'field='tn_text_1779566247730000001'><div><br/><span class="slide-left-name">Fathima Salwa</span></div><br /><br /><span class="slide-right-name">Hamdan</span></div></div> </div>   <div class='t396__elem tn-elem tn-elem__23396620631779566247730000004' data-elem-id='1779566247730000004' data-elem-type='text' data-field-top-value="144" data-field-left-value="573" data-field-height-value="31" data-field-width-value="55" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="28" data-field-top-res-320-value="132" data-field-left-res-320-value="134" data-field-left-res-480-value="214" data-field-left-res-640-value="294" data-field-left-res-960-value="454"> <div class='tn-atom' field='tn_text_1779566247730000004'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="hero-heart-icon"><path fill="#191970" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div> </div>  </div> </div> 
 <div class="t396__elem tn-elem tn-elem__2339662063_custom_logo" data-elem-id="custom_logo" data-elem-type="image">
  <div class="tn-atom">
    <img src="logo_transparent.png" alt="Wedding Logo" style="width:100%; height:auto; display:block;" />
